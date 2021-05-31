@@ -108,7 +108,10 @@
   }
 }
 
-.form input, .form input::-webkit-input-placeholder, .form textarea, .form textarea::-webkit-input-placeholder {
+.form input,
+.form input::-webkit-input-placeholder,
+.form textarea,
+.form textarea::-webkit-input-placeholder {
   padding-left: 10px;
   line-height: 30px;
   font-weight: 400;
