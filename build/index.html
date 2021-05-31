@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Сайт "Форма регистрации"</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="fonts/opensanslight.woff2" rel="preload" as="font" crossorigin="anonymous">
+  <link href="fonts/opensans.woff2" rel="preload" as="font" crossorigin="anonymous">
+  <link href="fonts/opensansbold.woff2" rel="preload" as="font" crossorigin="anonymous">
+</head>
+<body>
+<header class="header">
+</header>
+<main class="main">
+  <h1 class="visually_hidden">Сайт "Форма регистрации"</h1>
+
+  <section class="form">
+    <h2>Форма для заполнения</h2>
+    <form class="form__message" method="post" action="https://echo.htmlacademy.ru">
+      <fieldset class="form__fieldset">
+        <legend>ФИО и Дата рождения</legend>
+        <ul class="form__field form__name-field">
+          <li class="form__input-field">
+            <label for="form-last-name-input-id" class="form__label">Фамилия</label>
+            <input class="form__input" type="text" name="form-last-name-input" placeholder="Укажите фамилию *" id="form-last-name-input-id" required="">
+          </li>
+          <li class="form__input-field">
+            <label for="form-personal-name-input-id" class="form__label">Имя</label>
+            <input class="form__input" type="text" name="form-personal-name-input" placeholder="Введите Ваше имя *" id="form-personal-name-input-id" required="">
+          </li>
+          <li class="form__input-field">
+            <label for="form-middle-name-input-id" class="form__label">Отчество</label>
+            <input class="form__input" type="text" name="form-middle-name-input" placeholder="Укажите отчество" id="form-middle-name-input-id">
+          </li>
+          <li class="form__input-field">
+            <label for="form-birth-day-input-id" class="form__label">Дата Вашего рождения</label>
+            <input class="form__input" type="date" name="form-birth-day-input" id="form-birth-day-input-id" required="">
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="form__fieldset">
+        <legend>Адрес регистрации</legend>
+        <ul class="form__field form__address-field">
+          <li class="form__input-field">
+            <label for="form-city-input-id" class="form__label">Город</label>
+            <input class="form__input" type="text" name="form-city-input" placeholder="Укажите Ваш город" id="form-city-input-id">
+          </li>
+          <li class="form__input-field">
+            <label for="form-address-input-id" class="form__label">Адрес</label>
+            <input class="form__input" type="text" name="form-address-input" placeholder="Введите Ваш адрес" id="form-address-input-id">
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="form__fieldset">
+        <legend>Данные для входа</legend>
+        <div class="form__field form__registration-field">
+          <div class="form__contacts form__input-wrapper">
+            <div class="form__input-field">
+              <label for="form-email-input-id" class="form__label">Эл. почта</label>
+              <input class="form__input" type="email" name="form-email-input" placeholder="Введите почту *" id="form-email-input-id" required="">
+            </div>
+            <div class="form__input-field">
+              <label for="form-phone-input-id" class="form__label">Телефон</label>
+              <input class="form__input" type="tel" name="form-phone-input" placeholder="Номер, пожалуйста *" id="form-phone-input-id" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="">
+            </div>
+          </div>
+
+          <div class="form__password form__input-wrapper">
+            <div class="form__input-field">
+              <label for="form-password-input-id" class="form__label">Пароль</label>
+              <input class="form__input" type="password" name="form-password-input" placeholder="Придумайте пароль *" id="form-password-input-id" required="">
+            </div>
+            <div class="form__input-field">
+              <label for="form-password-confirm-input-id" class="form__label">Подтверждение пароля</label>
+              <input class="form__input" type="password" name="form-password-confirm-input" placeholder="Подтвердите пароль *" id="form-password-confirm-input-id" required="">
+            </div>
+          </div>
+
+          <div class="form__question form__input-wrapper">
+            <div class="form__input-field">
+              <label for="form-secret-question-input-id" class="form__label">Секретный вопрос</label>
+              <input class="form__input" type="text" name="form-secret-question-input" placeholder="Ваш секретный вопрос" id="form-secret-question-input-id" required="">
+            </div>
+            <div class="form__input-field">
+              <label for="form-secret-answer-input-id" class="form__label">Ответ на секретный вопрос</label>
+              <input class="form__input" type="text" name="form-secret-answer-input" placeholder="Введите ответ" id="form-secret-answer-input-id" required="">
+            </div>
+          </div>
+
+        </div>
+      </fieldset>
+
+      <div class="form__footer">
+        <button class="form__button-submit" type="submit" aria-label="Нажмите для того что бы зарегестрироваться" data-title="дать согласие на обработку">
+          Зарегистрироваться
+        </button>
+
+        <div class="form__checkbox-wrapper" tabindex="1" data-title="Для отправки формы необходимо согласиться с политикой портала">
+          <input class="visually_hidden form__checkbox" type="checkbox" name="form__checkbox-name" value="form__checkbox" id="form__checkbox-id" checked="">
+          <label for="form__checkbox-id" class="form__checkbox-label">Я согласен c политикой портала</label>
+        </div>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/jquery/jquery.maskedinput.min.js"></script>
+<script src="js/bundle.js"></script>
+</body>
+</html>
